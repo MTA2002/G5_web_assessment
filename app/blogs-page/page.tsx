@@ -47,8 +47,8 @@ const BlogsPage = () => {
           <div className="w-full flex flex-col gap-5">
             {Array(5)
               .fill(0)
-              .map((value) => {
-                return <ShimmeBlogCard />;
+              .map((value, index) => {
+                return <ShimmeBlogCard key={index} />;
               })}
           </div>
         )}
