@@ -1,7 +1,8 @@
 # Blog Web Application
 
 This project is a web application for displaying and viewing blog posts, built according to a Figma design. The application consists of two main pages: a Blog List and a Blog Detail page. It also includes a search functionality, proper data handling with Redux Toolkit, and follows a clear and organized code structure.
-
+## Screen-Shots
+Link : https://g5-web-assessment-git-g5webasses-5747e6-mahfouz-teyibs-projects.vercel.app/?_vercel_share=vQdQ0GIKP9GK4pzf6gJzctzHzM0D0GmB
 ## Features
 
 ### 1. Blog List Page
