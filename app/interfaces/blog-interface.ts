@@ -3,7 +3,7 @@ export default interface Blog {
   image: string;
   title: string;
   description: string;
-  author?: Author;
+  author: Author | null;
   isPending: boolean;
   tags: Array<String>;
   likes: number;
@@ -14,10 +14,22 @@ export default interface Blog {
   __v: 0;
 }
 
-type Author = {
+export type Author = {
   _id: string;
   name: string;
   email: string;
   image: string;
   role: string;
 };
+
+export interface BlogsState {
+  items: Blog[];
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
+}
+
+export interface SingleBlogState {
+  blog: Blog | null;
+  status: "idle" | "loading" | "succeeded" | "failed";
+  error: string | null;
+}

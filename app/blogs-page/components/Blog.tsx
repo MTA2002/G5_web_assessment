@@ -1,4 +1,4 @@
-import Blog from "@/app/interfaces/blog-interface";
+import Blog, { Author } from "@/app/interfaces/blog-interface";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,10 +12,28 @@ export const formatDate = (date: string): string => {
   return new Date(date).toLocaleDateString("en-US", options);
 };
 
+export const defaultAuthor: Author = {
+  _id: "64ec82804b3e591223483696",
+  name: "Yohannes Teffera",
+  email: "yohannesteffera@gmail.com",
+  image:
+    "https://res.cloudinary.com/djtkzulun/image/upload/v1693469225/A2sv/wrwt1ldwgdnq03y1jguy.jpg",
+  role: "user",
+};
+
 const BlogCard = ({ blog }: { blog: Blog }) => {
   function createMarkup() {
     return { __html: blog.description.split(".")[0] };
   }
+
+  function ensureAuthor(blog: Blog): Blog {
+    return {
+      ...blog,
+      author: blog.author ?? defaultAuthor,
+    };
+  }
+
+  const newBlog = ensureAuthor(blog);
   return (
     <div className="flex flex-col gap-7">
       <hr className="border-t w-full" />
@@ -23,30 +41,30 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
       <div className="flex flex-col gap-4">
         <div className="flex gap-5 items-center">
           <div>
-            <Image
-              src={blog.author?.image!}
+            <img
+              src={newBlog.author!.image}
               alt=""
-              width={10}
-              height={10}
               className="rounded-full w-12 h-12"
-            ></Image>
+            ></img>
           </div>
           <div>
             <div className="flex gap-3 items-center">
-              <p className="font-semibold">{blog.author?.name!}</p>
+              <p className="font-semibold">{newBlog.author!.name!}</p>
               <div className="w-1 h-1 rounded-full bg-[#868686]"></div>
               <p className="text-[#868686] text-sm">
-                {formatDate(blog.createdAt)}
+                {formatDate(newBlog.createdAt)}
               </p>
             </div>
-            <p className="text-[#9C9C9C] font-semibold">{blog.author?.role!}</p>
+            <p className="text-[#9C9C9C] font-semibold">
+              {newBlog.author!.role!}
+            </p>
           </div>
         </div>
 
-        <div className="flex flex-col-reverse  lg:flex-row lg:items-center">
+        <div className="flex flex-col-reverse  lg:flex-row lg:items-center justify-between">
           <div className="flex flex-col gap-4">
-            <Link href={"/blogs-page/blog-detail"}>
-              <h1 className="font-bold text-2xl">{blog.title}</h1>
+            <Link href={`/blogs-page/${newBlog._id}`}>
+              <h1 className="font-bold text-2xl">{newBlog.title}</h1>
             </Link>
             <div
               dangerouslySetInnerHTML={createMarkup()}
@@ -54,7 +72,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
             />
           </div>
           <Image
-            src={blog.image}
+            src={newBlog.image}
             alt=""
             width={449}
             height={295}
@@ -62,7 +80,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
           ></Image>
         </div>
         <div className="flex gap-3">
-          {blog.tags.map((tag, index) => {
+          {newBlog.tags.map((tag, index) => {
             return (
               <div
                 key={index}
