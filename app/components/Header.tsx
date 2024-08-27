@@ -25,14 +25,16 @@ const links = [
 const Header = () => {
   const map = new Map();
   map.set("/", 0);
-  map.set("/blogs-page", 4);
+  map.set("/b", 4);
   const pathName = usePathname();
   const [activeIndex, setActiveIndex] = useState(
-    map.get(pathName) != undefined ? map.get(pathName) : 0
+    map.get(pathName.slice(0, 2)) != undefined
+      ? map.get(pathName.slice(0, 2))
+      : 0
   );
 
   return (
-    <div className="flex justify-between items-center p-5 md:shadow">
+    <div className="flex justify-between items-center p-5 md:shadow top-0 sticky bg-white">
       <div>
         <Image src="/a2svlogo.svg" alt="" width={127} height={30} />
       </div>
@@ -60,7 +62,9 @@ const Header = () => {
         })}
       </div>
       <div className="flex gap-8 items-center">
-        <button className="font-bold hidden md:block">Login</button>
+        <Link className="font-bold hidden md:block" href={""}>
+          Login
+        </Link>
         <button className="bg-[#264FAD] py-2 px-4 rounded-lg text-white hover:bg-[#4764a8] hidden md:block">
           Donate
         </button>
@@ -95,7 +99,9 @@ const Header = () => {
                   );
                 })}
 
-                <button className="font-bold md:hidden">Login</button>
+                <Link className="font-bold md:hidden" href={""}>
+                  Login
+                </Link>
                 <button className="bg-[#264FAD] py-2 px-4 rounded-lg text-white hover:bg-[#4764a8] md:hidden">
                   Donate
                 </button>

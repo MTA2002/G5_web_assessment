@@ -21,11 +21,18 @@ const BlogsPage = () => {
   }, [status, dispatch]);
 
   const filteredBlogs = items.filter((item) => {
-    return item.title.toLowerCase().includes(searchTerm.toLowerCase());
+    return (
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.tags.includes(searchTerm) ||
+      item.author?.name.includes(searchTerm)
+    );
   });
 
   return (
-    <div className="flex flex-col px-28 py-16 gap-16 lg:flex-row min-h-[100vh]">
+    <div
+      className="flex flex-col px-7 text-sm py-7 gap-8 lg:flex-row min-h-[100vh] md:px-28 md:py-14 md:gap-16 md:text-base
+    "
+    >
       <div>
         <h1 className="font-semibold text-xl">Blogs</h1>
       </div>
@@ -33,7 +40,7 @@ const BlogsPage = () => {
         <div className="flex gap-5">
           <input
             type="text"
-            className="border px-5 py-2 rounded-full border-[#CFCFCF]"
+            className="border px-5 py-2 rounded-full border-[#CFCFCF] text-sm md:text-base"
             placeholder="Search..."
             onChange={(e) => {
               setSearchTerm(e.target.value);

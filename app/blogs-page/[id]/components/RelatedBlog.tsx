@@ -3,7 +3,7 @@ import Blog from "@/app/interfaces/blog-interface";
 import Image from "next/image";
 import Link from "next/link";
 import { FiMessageSquare } from "react-icons/fi";
-import { formatDate } from "./Blog";
+import { formatDate } from "../../components/Blog";
 
 const RelatedBlog = ({ blog }: { blog: Blog }) => {
   function createMarkup() {

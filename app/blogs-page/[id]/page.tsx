@@ -3,8 +3,8 @@ import Blog from "@/app/interfaces/blog-interface";
 import { useParams } from "next/navigation";
 import React, { useEffect } from "react";
 import Image from "next/image";
-import RelatedBlogs from "../components/RelatedBlog";
-import RelatedBlog from "../components/RelatedBlog";
+import RelatedBlogs from "./components/RelatedBlog";
+import RelatedBlog from "./components/RelatedBlog";
 import { AppDispatch, RootState } from "@/app/store";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleBlog } from "@/app/features/singleBlogs/single-blog-slice";
@@ -51,7 +51,7 @@ const BlogDetail = () => {
   const newBlog = ensureAuthor(blog!);
 
   return (
-    <div className="flex flex-col items-center px-16 py-10 gap-10 lg:px-44 md:px-32 min-h-[100vh]">
+    <div className="flex flex-col items-center px-7 py-10 gap-10 lg:px-44 md:px-32 min-h-[100vh]">
       <div className="flex flex-col gap-3 items-center">
         <h1 className="text-4xl font-bold">{newBlog?.title}</h1>
         <p className="font-light text-sm">

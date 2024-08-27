@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import TopLoader from "./components/Toploader";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import { usePathname } from "next/navigation";
 
 const inter = Montserrat({ subsets: ["latin"] });
 
@@ -15,14 +16,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathName = usePathname();
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <Provider store={store}>
           <TopLoader />
-          <Header />
+          {pathName.includes("auth") == false && <Header />}
           {children}
-          <Footer />
+          {pathName.includes("auth") == false && <Footer />}
         </Provider>
       </body>
     </html>
