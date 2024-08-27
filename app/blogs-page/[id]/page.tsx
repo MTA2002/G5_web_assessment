@@ -9,6 +9,7 @@ import { AppDispatch, RootState } from "@/app/store";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSingleBlog } from "@/app/features/singleBlogs/single-blog-slice";
 import { defaultAuthor } from "../components/Blog";
+import { ShimmerBlogDetail } from "../shimmer-components";
 
 const BlogDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -24,7 +25,11 @@ const BlogDetail = () => {
   }, [status, dispatch]);
 
   if (status === "loading" || status == "idle") {
-    return <div className="min-h-[100vh]">Loading...</div>;
+    return (
+      <div className="min-h-[100vh]">
+        <ShimmerBlogDetail />.
+      </div>
+    );
   }
 
   if (status === "failed") {
