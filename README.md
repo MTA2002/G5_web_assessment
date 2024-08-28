@@ -56,10 +56,11 @@ Link : https://g5-web-assessment-git-g5webasses-5747e6-mahfouz-teyibs-projects.v
 
 ## Screen-Shots
 
-<img src='public/Screenshot 2024-08-27 at 6.18.28 in the evening.png'>
-<img src='public/Screenshot 2024-08-27 at 6.21.32 in the evening.png'>
-<img width="1440" alt="Screenshot 2024-08-28 at 4 57 55 in the afternoon" src="https://github.com/user-attachments/assets/26bf659c-f81c-4342-9444-a755a65b4cfd">
-<img width="1440" alt="Screenshot 2024-08-28 at 4 58 01 in the afternoon" src="https://github.com/user-attachments/assets/d9c2999b-97bc-43d3-969a-a512b7fe1ce2">
-<img width="1440" alt="Screenshot 2024-08-28 at 4 57 55 in the afternoon" src="https://github.com/user-attachments/assets/f0e9c9ff-2b8d-4a34-8e5b-20145d124cab">
-<img width="1440" alt="Screenshot 2024-08-28 at 4 58 01 in the afternoon" src="https://github.com/user-attachments/assets/76f67b62-18c8-4fbf-9b5c-b609cfb994e1">
-<img width="1440" alt="Screenshot 2024-08-28 at 4 58 10 in the afternoon" src="https://github.com/user-attachments/assets/af145b83-4c9d-4a71-ba38-2118ce6fb7b5">
+
+<img width="1440" alt="Screenshot 2024-08-28 at 5 24 25 in the afternoon" src="https://github.com/user-attachments/assets/a17450c5-1eee-4f94-a2ec-a8f41c8beb4d">
+<img width="1440" alt="Screenshot 2024-08-28 at 5 24 14 in the afternoon" src="https://github.com/user-attachments/assets/ccc13484-3e31-47a2-ae6a-e265a2d985f1">
+<img width="1440" alt="Screenshot 2024-08-28 at 5 24 10 in the afternoon" src="https://github.com/user-attachments/assets/5607099c-5f0e-4434-900e-fdd9c3abf172">
+<img width="1440" alt="Screenshot 2024-08-28 at 5 21 09 in the afternoon" src="https://github.com/user-attachments/assets/3e4dbe7e-0d02-4463-b054-96e0c9320dac">
+<img width="1440" alt="Screenshot 2024-08-28 at 5 20 58 in the afternoon" src="https://github.com/user-attachments/assets/d0be4c1f-41b1-4764-8a79-7702bd3d393d">
+<img width="1440" alt="Screenshot 2024-08-28 at 5 20 49 in the afternoon" src="https://github.com/user-attachments/assets/62b22827-eeb8-4f22-ab60-64e624912388">
+<img width="1440" alt="Screenshot 2024-08-28 at 5 20 45 in the afternoon" src="https://github.com/user-attachments/assets/f1c692ea-a201-45ba-a3e5-4de718246318">
