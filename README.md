@@ -1,7 +1,6 @@
-<img width="1440" alt="Screenshot 2024-08-28 at 5 00 26 in the afternoon" src="https://github.com/user-attachments/assets/1dc96030-3ba1-470e-ae36-c741a8587c85"># Blog Web Application
 
 This project is a web application for displaying and viewing blog posts, built according to a Figma design. The application consists of two main pages: a Blog List and a Blog Detail page. It also includes a search functionality, proper data handling with Redux Toolkit, and follows a clear and organized code structure.
-## Screen-Shots
+## Link
 Link : https://g5-web-assessment-git-g5webasses-5747e6-mahfouz-teyibs-projects.vercel.app/?_vercel_share=vQdQ0GIKP9GK4pzf6gJzctzHzM0D0GmB
 ## Features
 
@@ -55,7 +54,7 @@ Link : https://g5-web-assessment-git-g5webasses-5747e6-mahfouz-teyibs-projects.v
    npm run dev
    '''
 
-### Screen-Shots
+## Screen-Shots
 
 <img src='public/Screenshot 2024-08-27 at 6.18.28 in the evening.png'>
 <img src='public/Screenshot 2024-08-27 at 6.21.32 in the evening.png'>
